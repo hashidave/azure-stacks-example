@@ -14,7 +14,10 @@ required_providers {
 }
 
 
-variable "client_id" { type = string }
+variable "client_id" {
+  type      = string
+  ephemeral = "true"
+}
 variable "client_secret" {
   type = string
 }
