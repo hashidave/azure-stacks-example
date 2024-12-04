@@ -6,7 +6,7 @@ component "rg" {
 
   inputs = {
     resource_group_name     = "stacks-example-resources"
-    resource_group_location = "East US"
+    resource_group_location = var.region
   }
 
   providers = {
