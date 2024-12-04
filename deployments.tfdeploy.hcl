@@ -1,16 +1,16 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
-identity_token "azurerm" {
-  audience = ["api://AzureADTokenExchange"]
+store "varset" "tokens" {
+  id       = "varset-gZ8inWU6iKS3NzAr"
+  category = "terraform"
 }
 
 deployment "production" {
   inputs = {
-    identity_token = identity_token.azurerm.jwt
-
-    client_id       = "<Set to your Azure Client ID>"
-    subscription_id = "<Set to your Azure Subscription ID>"
-    tenant_id       = "<Set to your Azure Tenant ID>"
+    client_id       = var.client_id
+    client_secret   = var.client_secret
+    tenant_id       = var.tenant_id
+    subscription_id = var.subscription_id
   }
 }
