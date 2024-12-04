@@ -7,7 +7,6 @@ variable "resource_group_name" {
 }
 
 variable "resource_group_location" {
-  type      = string
-  default   = "East US"
-  ephemeral = "true"
+  type    = string
+  default = "East US"
 }
