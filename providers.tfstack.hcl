@@ -19,12 +19,22 @@ variable "client_id" {
   ephemeral = "true"
 }
 variable "client_secret" {
-  type = string
+  type      = string
+  ephemeral = "true"
 }
 
-variable "subscription_id" { type = string }
-variable "tenant_id" { type = string }
-variable "region" { type = string }
+variable "subscription_id" {
+  type      = string
+  ephemeral = "true"
+}
+variable "tenant_id" {
+  type      = string
+  ephemeral = "true"
+}
+variable "region" {
+  type      = string
+  ephemeral = "true"
+}
 
 
 provider "azurerm" "this" {
