@@ -8,9 +8,9 @@ store "varset" "tokens" {
 
 deployment "production" {
   inputs = {
-    client_id       = store.varset.tokens.client_id
-    client_secret   = store.varset.tokens.client_secret
-    tenant_id       = store.varset.tokens.tenant_id
-    subscription_id = store.varset.tokens.subscription_id
+    client_id       = var.client_id
+    client_secret   = var.client_secret
+    tenant_id       = var.tenant_id
+    subscription_id = var.subscription_id
   }
 }
