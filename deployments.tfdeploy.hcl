@@ -12,6 +12,16 @@ deployment "production" {
     client_secret   = store.varset.tokens.client_secret
     tenant_id       = store.varset.tokens.tenant_id
     subscription_id = store.varset.tokens.subscription_id
-    region          = "US East"
+    region          = "East US"
+  }
+}
+
+deployment "dev" {
+  inputs = {
+    client_id       = store.varset.tokens.client_id
+    client_secret   = store.varset.tokens.client_secret
+    tenant_id       = store.varset.tokens.tenant_id
+    subscription_id = store.varset.tokens.subscription_id
+    region          = "Central US"
   }
 }
