@@ -32,8 +32,7 @@ variable "tenant_id" {
   ephemeral = "true"
 }
 variable "region" {
-  type      = string
-  ephemeral = "true"
+  type = string
 }
 
 
