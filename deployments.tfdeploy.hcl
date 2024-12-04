@@ -8,12 +8,10 @@ store "varset" "tokens" {
 
 deployment "production" {
   inputs = {
-    region = "US West"
-  }
-}
-
-deployment "dev" {
-  inputs = {
-    region = "US East"
+    client_id       = store.varset.tokens.client_id
+    client_secret   = store.varset.tokens.clid
+    tenant_id       = store.varset.tokens.tenant_id
+    subscription_id = store.varset.tokens.subscription_id
+    region          = "US East"
   }
 }
